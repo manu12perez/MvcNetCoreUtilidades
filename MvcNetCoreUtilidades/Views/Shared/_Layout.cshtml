@@ -29,6 +29,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="UploadFiles" asp-action="SubirFichero">Subir Fichero</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Mails" asp-action="SendMail">Mails</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Criptografía
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Cifrados" asp-action="CifradoBasico">Cifrado Básico</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Cifrados" asp-action="CifradoEficiente">Cifrado Eficiente</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

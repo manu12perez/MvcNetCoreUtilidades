@@ -1,0 +1,17 @@
+﻿<h1 style="color:blue">
+	Cifrado Básico
+</h1>
+
+<form method="post">
+	<label>Contenido a cifrar</label>
+	<input type="text" name="contenido" class="form-control" />
+	<label>Resultado cifrado</label>
+	<textarea name="resultado" rows="5" class="form-control">@ViewData["TEXTOCIFRADO"]</textarea>
+	<button class="btn btn-info" name="accion" value="cifrar">
+		Cifrar contenido
+	</button>
+	<button class="btn btn-danger" name="accion" value="comparar">
+		Comparar contenido
+	</button>
+</form>
+<h2 style="color:red">@ViewData["MENSAJE"]</h2>

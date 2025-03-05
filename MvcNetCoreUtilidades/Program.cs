@@ -1,4 +1,5 @@
 using MvcNetCoreUtilidades.Helpers;
+using MvcNetCoreUtilidades.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,8 @@ builder.Services.AddDistributedMemoryCache();
 builder.Services.AddMemoryCache();
 builder.Services.AddSingleton<HelperPathProvider>();
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession();
+builder.Services.AddTransient<RepositoryCoches>();
 /**********************************************************************************************************************************************/
 
 var app = builder.Build();
@@ -31,6 +34,10 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapStaticAssets();
+
+/**********************************************************************************************************************************************/
+app.UseSession();
+/**********************************************************************************************************************************************/
 
 app.MapControllerRoute(
     name: "default",

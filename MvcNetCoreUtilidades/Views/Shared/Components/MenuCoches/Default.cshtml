@@ -1,0 +1,22 @@
+﻿@model List<Coche>
+
+<ul class="navbar-nav">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Coches
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark">
+            @foreach (Coche car in Model)
+            {
+                <li>
+                    <a asp-controller="Coches" 
+                        asp-action="Details" 
+                        asp-route-idcoche="@car.IdCoche" 
+                        class="dropdown-item">
+                            @car.Marca
+                    </a>
+                </li>
+            }
+        </ul>
+    </li>
+</ul>

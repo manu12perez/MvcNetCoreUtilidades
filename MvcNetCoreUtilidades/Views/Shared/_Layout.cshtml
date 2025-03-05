@@ -41,7 +41,14 @@
                                 <li><a class="dropdown-item" asp-area="" asp-controller="Cifrados" asp-action="CifradoEficiente">Cifrado Eficiente</a></li>
                             </ul>
                         </li>
-                    </ul>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Coches" asp-action="Index">Coches Ajax</a>
+                        </li>
+
+                        @await Component.InvokeAsync("MenuCoches")
+
+                        <partial name="_MenuUsuario" />
+                    </ul>                    
                 </div>
             </div>
         </nav>
